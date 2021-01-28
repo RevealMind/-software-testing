@@ -5,12 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.revealmind.testing.dao.UserDao;
 import com.github.revealmind.testing.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,9 +25,7 @@ public class UserController {
     @PostMapping("/users/register")
     @CrossOrigin(origins = "http://localhost:3000")
     @ResponseBody
-    public String register(@RequestBody User user, HttpServletResponse httpResponse) throws JsonProcessingException {
-        System.out.println(user.getLogin());
-        System.out.println(user.getPassword());
+    public String register(@RequestBody User user) throws JsonProcessingException {
         List<User> users = userDao.getUser(user.getLogin());
         HashMap<String, String> map = new HashMap<>();
 
@@ -41,7 +36,6 @@ public class UserController {
 
         userDao.addUser(user);
         map.put("login", user.getLogin());
-        httpResponse.setStatus(HttpStatus.OK.value());
 
         return mapper.writeValueAsString(map);
     }
