@@ -1,0 +1,50 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: client
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  client:
+    strategy:
+      matrix:
+        node-version: [14.5.x]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+
+      - name: Run API
+        working-directory: api
+        run: |
+          npm install
+          npm start &
+        env:
+            PORT: 9000
+
+
+      - name: Run client test
+        working-directory: client
+        run: |
+          npm install
+          npm start &
+          npm run test-cypress &
+          npm run test-jest
+        env:
+          CI: true
+          API_URI: http://localhost:3000/
