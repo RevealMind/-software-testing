@@ -1,0 +1,140 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvaW5kZXguY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsU0FBUztFQUNUOztjQUVZO0VBQ1osbUNBQW1DO0VBQ25DLGtDQUFrQztBQUNwQzs7QUFFQTtFQUNFO2FBQ1c7QUFDYjs7QUFFQTtFQUNFLHNCQUFzQjtBQUN4QiIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBtYXJnaW46IDA7XG4gIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICdTZWdvZSBVSScsICdSb2JvdG8nLCAnT3h5Z2VuJyxcbiAgICAnVWJ1bnR1JywgJ0NhbnRhcmVsbCcsICdGaXJhIFNhbnMnLCAnRHJvaWQgU2FucycsICdIZWx2ZXRpY2EgTmV1ZScsXG4gICAgc2Fucy1zZXJpZjtcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG4gIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XG59XG5cbmNvZGUge1xuICBmb250LWZhbWlseTogc291cmNlLWNvZGUtcHJvLCBNZW5sbywgTW9uYWNvLCBDb25zb2xhcywgJ0NvdXJpZXIgTmV3JyxcbiAgICBtb25vc3BhY2U7XG59XG5cbioge1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xufSJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>.App {
+    font-size: 32px;
+
+    background: url(data:image/png;base64,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);
+
+    height: 100vh;
+}
+
+.home {
+    text-align: center;
+    margin-top: 25px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvQXBwLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGVBQWU7O0lBRWYsbURBQXVDOztJQUV2QyxhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLGdCQUFnQjtBQUNwQiIsInNvdXJjZXNDb250ZW50IjpbIi5BcHAge1xyXG4gICAgZm9udC1zaXplOiAzMnB4O1xyXG5cclxuICAgIGJhY2tncm91bmQ6IHVybCgnLi93aGl0ZS1zY3JhdG9uZS5wbmcnKTtcclxuXHJcbiAgICBoZWlnaHQ6IDEwMHZoO1xyXG59XHJcblxyXG4uaG9tZSB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBtYXJnaW4tdG9wOiAyNXB4O1xyXG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+
+
+    background: black;
+}
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 4px solid yellow;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvY29tcG9uZW50cy9OYXYuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksYUFBYTtJQUNiLDhCQUE4QjtJQUM5QixtQkFBbUI7SUFDbkIsV0FBVzs7O0lBR1gsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksV0FBVztJQUNYLGFBQWE7SUFDYiw2QkFBNkI7SUFDN0IsbUJBQW1CO0lBQ25CLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixxQkFBcUI7QUFDekI7O0FBRUE7SUFDSSwrQkFBK0I7QUFDbkMiLCJzb3VyY2VzQ29udGVudCI6WyJuYXYge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBoZWlnaHQ6IDd2aDtcclxuXHJcblxyXG4gICAgYmFja2dyb3VuZDogYmxhY2s7XHJcbn1cclxuXHJcbi5uYXYtbGlua3Mge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1hcm91bmQ7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgbGlzdC1zdHlsZTogbm9uZTtcclxufVxyXG5cclxuYSB7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbn1cclxuXHJcbmE6aG92ZXIge1xyXG4gICAgYm9yZGVyLWJvdHRvbTogNHB4IHNvbGlkIHllbGxvdztcclxufSJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>input {
+    display: block;
+    padding: 10px 20px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+form {
+    display: block;
+    width: 30%;
+    margin: 50px auto 0;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 35px 25px 15px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 30px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.error {
+    margin: -10px 0 0;
+    color: red;
+    font-size: 16px;
+}
+
+.validate-error {
+    margin: 0
+}
+
+.title {
+    margin: 0 0 25px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 40px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvY29tcG9uZW50cy9Mb2dpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxjQUFjO0lBQ2Qsa0JBQWtCO0lBQ2xCLGFBQWE7SUFDYixXQUFXO0FBQ2Y7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsVUFBVTtJQUNWLG1CQUFtQjtJQUNuQix1QkFBdUI7SUFDdkIsa0JBQWtCO0lBQ2xCLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLHlCQUF5QjtJQUN6QixZQUFZO0lBQ1osa0JBQWtCO0lBQ2xCLGFBQWE7SUFDYixZQUFZO0lBQ1osZUFBZTtJQUNmLFdBQVc7QUFDZjs7QUFFQTtJQUNJLGlCQUFpQjtJQUNqQixVQUFVO0lBQ1YsZUFBZTtBQUNuQjs7QUFFQTtJQUNJO0FBQ0o7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLDBCQUEwQjtJQUMxQixlQUFlO0FBQ25CIiwic291cmNlc0NvbnRlbnQiOlsiaW5wdXQge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBwYWRkaW5nOiAxMHB4IDIwcHg7XHJcbiAgICBtYXJnaW46IDhweCAwO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbmZvcm0ge1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICB3aWR0aDogMzAlO1xyXG4gICAgbWFyZ2luOiA1MHB4IGF1dG8gMDtcclxuICAgIGJvcmRlcjogc29saWQgMnB4IGJsYWNrO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG4gICAgcGFkZGluZzogMzVweCAyNXB4IDE1cHg7XHJcbn1cclxuXHJcbmJ1dHRvbiB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNENBRjUwO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgcGFkZGluZzogMTBweCAzMHB4O1xyXG4gICAgbWFyZ2luOiA4cHggMDtcclxuICAgIGJvcmRlcjogbm9uZTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uZXJyb3Ige1xyXG4gICAgbWFyZ2luOiAtMTBweCAwIDA7XHJcbiAgICBjb2xvcjogcmVkO1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcblxyXG4udmFsaWRhdGUtZXJyb3Ige1xyXG4gICAgbWFyZ2luOiAwXHJcbn1cclxuXHJcbi50aXRsZSB7XHJcbiAgICBtYXJnaW46IDAgMCAyNXB4O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XHJcbiAgICBmb250LXNpemU6IDQwcHg7XHJcbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>.error-page {
+    text-align: center;
+    font-size: 16px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvY29tcG9uZW50cy9FcnJvci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxrQkFBa0I7SUFDbEIsZUFBZTtBQUNuQiIsInNvdXJjZXNDb250ZW50IjpbIi5lcnJvci1wYWdlIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogMTZweDtcclxufSJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><nav><ul class="nav-links"><a class="home__link" href="/"><li>Home</li></a><a class="logout__link" href="/"> <li>Logout</li> </a></ul></nav><div class="home"><span>Hello, test!</span></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="/static/js/bundle.js"></script><script src="/static/js/0.chunk.js"></script><script src="/static/js/main.chunk.js"></script>
+
+</body></html>
